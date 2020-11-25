@@ -30,7 +30,7 @@
     <div id="map"></div>
     <td><div id="sidebar"></div></td>
     <script src="constants.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAhemHfzADNl1J68SGkijRXyQvNLmsri_4&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=[API キーを入力してください]&callback=initMap" async defer></script>
     <script>
       var map;
       var marker = [];
@@ -62,7 +62,7 @@
         });
 
         var request = new XMLHttpRequest();
-        request.open('GET', `https://sheets.googleapis.com/v4/spreadsheets/$1urWNevKEAYL14oFPOpAwIfC28s7Txwt60vMmRbvo7wc/values/anypicks?key=$AIzaSyAhemHfzADNl1J68SGkijRXyQvNLmsri_4`, true);
+        request.open('GET', `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/anypicks?key=${API_KEY}`, true);
         request.responseType = 'json';
 
         request.onload = function () {
